@@ -1,0 +1,103 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.mindmap, .ejemplo {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 20px;
+  position: relative;
+}
+
+ul ul {
+  margin-left: 20px;
+}
+
+li {
+  margin: 10px 0;
+  position: relative;
+}
+
+li::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -12px;
+  width: 2px;
+  height: 100%;
+  background: #ccc;
+}
+
+.node {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e0f7fa;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: #00796b;
+  font-weight: bold;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+.node:hover {
+  background-color: #b2ebf2;
+}
+
+.hint {
+  color: #666;
+  font-style: italic;
+  margin-left: 10px;
+  font-size: 0.9em;
+  user-select: none;
+}
+
+.ejemplo h2 {
+  color: #333;
+}
+
+.ejemplo input {
+  padding: 8px;
+  margin: 8px 4px;
+  width: 100px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.ejemplo button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ejemplo button:hover {
+  background-color: #388e3c;
+}
+
+.ejemplo #resultado {
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
